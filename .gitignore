@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# type-check artifacts
+*.tsbuildinfo
+
+# misc
+.DS_Store
+*.local
+npm-debug.log*
