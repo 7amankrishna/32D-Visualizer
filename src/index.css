@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #05070d;
+  --color-panel: #0b101c;
+  --color-panel2: #101828;
+  --color-line: #1d2a44;
+  --color-accent: #4cc9f0;
+  --color-accent2: #b5179e;
+  --color-you: #ffd60a;
+  --color-txt: #dbe4f5;
+  --color-dim: #7f93b8;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #05070d;
+  color: #dbe4f5;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #24345a #0b101c;
+}
+
+canvas {
+  display: block;
+}
+
+.btn {
+  @apply rounded-md border border-line bg-panel2 px-2.5 py-1.5 text-xs font-medium text-txt transition-colors hover:border-accent/60 hover:bg-line/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+}
+
+.btn-active {
+  @apply border-accent/80 bg-accent/15 text-accent;
+}
+
+.btn-you {
+  @apply border-you/60 bg-you/10 text-you hover:bg-you/20;
+}
+
+.lbl {
+  @apply mb-1 block text-[10px] font-semibold uppercase tracking-[0.14em] text-dim;
+}
+
+.panel {
+  @apply rounded-lg border border-line bg-panel/90;
+}
+
+input[type="range"] {
+  @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-line;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 9999px;
+  background: #4cc9f0;
+  border: 2px solid #05070d;
+  box-shadow: 0 0 6px rgba(76, 201, 240, 0.8);
+}
+
+kbd {
+  @apply rounded border border-line bg-panel2 px-1 py-0.5 font-mono text-[10px] text-dim;
+}
